@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso5</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/caso5.png" alt="caso5">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var hemo,edad,sexo,resultado;
+
+                //2. Fase entrada/lectura de datos
+                hemo=parseInt(prompt("Ingrese su nivel de hemogoblina(g%)"));
+                edad=parseFloat(prompt("Ingrese su edad en meses"));
+                sexo=prompt("Ingrese su sexo (M|F)").toUpperCase();
+
+                //3. Fase del procesamiento de datos
+                if (edad>0 && edad<=1 && hemo<13) {
+                    resultado="Positivo"
+                } else {
+                    if (edad>1 && edad<=6 && hemo<10) {
+                        resultado="Positivo"
+                    } else {
+                        if (edad>6 && edad<=12 && hemo<11) {
+                            resultado="Positivo"
+                        } else {
+                            if (edad>12 && edad<=60 && hemo<11.5) {
+                                resultado="Positivo"
+                            } else {
+                                if (edad>60 && edad<=120 && hemo<12.6) {
+                                    resultado="Positivo"
+                                } else {
+                                    if (edad>120 && edad<=180 && hemo<13) {
+                                        resultado="Positivo"
+                                    } else {
+                                        resultado="Negativo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //4. Fase de salida
+                    document.write("======= Resultados ======="+"<br>");
+                    document.write("Edad: "+edad+" meses <br>");
+                    document.write("Sexo: "+sexo+"<br>");
+                    document.write("Nivel de Hemoglobina: "+hemo+" g% <br>");
+                    document.write("Resultado de Anemia: "+resultado+" <br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

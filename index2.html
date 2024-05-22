@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso2</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/caso2.png" alt="caso2">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var torndef,tornpro,grado;
+
+                //2. Fase entrada/lectura de datos
+                torndef=parseInt(prompt("Ingrese la cantidad de tornillos defectuosos del operario"));
+                tornpro=parseInt(prompt("Ingrese la cantidad de tornillos producidos por el operario"));
+
+                //3. Fase del procesamiento de datos
+                if (torndef<200 && tornpro>10000) {
+                    grado=8
+                } else {
+                    if (torndef>=200 && tornpro>10000) {
+                        grado=7
+                    } else {
+                        if (torndef<200 && tornpro<=10000) {
+                            grado=6
+                        } else {
+                            grado=5
+                        }
+                    }
+                }
+
+                //4. Fase de salida
+                    document.write("======= Resultados del operario ======="+"<br>");
+                    document.write("Tornillos defectuosos: "+torndef+"<br>");
+                    document.write("Tornillos producidos: "+tornpro+"<br>");
+                    document.write("Grado del operario: "+grado+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

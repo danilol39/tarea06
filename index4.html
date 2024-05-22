@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso4</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/caso4.png" alt="caso4">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var n1,n2,n3,n4,prom,notaeli;
+
+                //2. Fase entrada/lectura de datos
+                n1=parseInt(prompt("Ingrese la primera nota"));
+                n2=parseInt(prompt("Ingrese la segunda nota"));
+                n3=parseInt(prompt("Ingrese la tercera nota"));
+                n4=parseInt(prompt("Ingrese la cuarta nota"));
+
+                //3. Fase del procesamiento de datos
+                notaeli=n1
+                if (n2<notaeli){
+                    notaeli=2
+                    nota="Nota 2"
+                } else {
+                    if (n3<notaeli) {
+                        notaeli=n3
+                        nota="Nota 3"
+                    } else {
+                        if (n4<notaeli) {
+                            notaeli=n4
+                            nota="Nota 4"
+                        } else {
+                            notaeli=n1
+                            nota="Nota 1"
+                        }
+                    }
+                }
+                prom=(n1+n2+n3+n4-notaeli)/3
+                //4. Fase de salida
+                    document.write("======= PROMEDIO ======="+"<br>");
+                    document.write("Nota 1: "+n1+"<br>");
+                    document.write("Nota 2: "+n2+"<br>");
+                    document.write("Nota 3: "+n3+"<br>");
+                    document.write("Nota 4: "+n4+"<br>");
+                    document.write("Nota Eliminada: "+notaeli+" ("+nota+")<br>");
+                    document.write("Promedio: "+prom+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

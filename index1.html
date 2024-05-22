@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/caso1.png" alt="caso1">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var llantas,precio,total;
+
+                //2. Fase entrada/lectura de datos
+                llantas=parseInt(prompt("Ingrese la cantidad de llantas compradas"));
+
+                //3. Fase del procesamiento de datos
+                if (llantas<5) {
+                    precio=30000
+                } else {
+                    if (llantas<=10) {
+                        precio=25000
+                    } else {
+                        precio=20000
+                    }
+                }
+                total=precio*llantas
+
+                //4. Fase de salida
+                    document.write("======= Boleta ======="+"<br>");
+                    document.write("Precio unitario: $"+precio+"<br>");
+                    document.write("Cantidad de llantas compradas: "+llantas+"<br>");
+                    document.write("Total a pagar: $"+total+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

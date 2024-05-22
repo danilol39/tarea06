@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/caso3.png" alt="caso3">
+            <p>*Supongamos que el Kilo de Manzana cuesta S/.8</p>
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var kman,desc,precio,total;
+
+                //2. Fase entrada/lectura de datos
+                kman=parseInt(prompt("Ingrese la cantidad de Kilos de Manzana comprados"));
+
+                //3. Fase del procesamiento de datos
+                precio=8*kman
+                if (kman<=2) {
+                    desc=precio*0/100
+                } else {
+                    if (kman<=5) {
+                        desc=precio*10/100
+                    } else {
+                        if (kman<=10) {
+                            desc=precio*15/100
+                        } else {
+                            desc=precio*20/100
+                        }
+                    }
+                }
+                total=precio-desc
+
+
+                //4. Fase de salida
+                    document.write("======= Pago ======="+"<br>");
+                    document.write("Cantidad de Kilos de Manzana comprados: "+kman+"<br>");
+                    document.write("Precio sin descuento: "+precio+"<br>");
+                    document.write("Descuento efectuado: "+desc+"<br>");
+                    document.write("Total a pagar: "+total+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
